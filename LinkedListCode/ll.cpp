@@ -64,6 +64,10 @@ class LinkedList {
 
     }
     bool search(int key){
+        if(head == nullptr){
+            cout<<"List is empty"<<endl;
+            return false;
+        }
         Node* temp = head;
         while(temp != nullptr){
             if(temp->data == key){
