@@ -121,10 +121,25 @@ class LinkedList {
         temp->next = toDelete->next;
         delete toDelete;
     }
+    int count_number_of_occurences(int key){
+        Node* temp = head;
+        int count = 0;
+        while(temp != nullptr){
+            if(temp->data == key){
+                count++;
+            }
+            temp = temp->next;
+        }
+        return count;
+    }
+    
 };
+//TODO: Implement the following functions take two linked list(sorted) and merge them into a single sorted linked list
 int main (){
     LinkedList ll;
     ll.insert_at_beginning(10);
+    ll.display();
+    ll.insert_at_end(20);
     ll.display();
     ll.insert_at_end(20);
     ll.display();
@@ -142,5 +157,7 @@ int main (){
     // ll.display();
     ll.delete_in_between(15,1);
     ll.display();
+    int count = ll.count_number_of_occurences(20);
+    cout<<"Number of occurences of 20 is "<<count<<endl;
     return 0;
 }
