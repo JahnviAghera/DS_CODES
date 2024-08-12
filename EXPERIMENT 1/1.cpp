@@ -50,6 +50,8 @@ int main(){
         employees[i].display();
     }
     for(int i =0; i<10; i++){
+        int newsalary;
+        cout<<"Enter new salary for employee "<<employees[i].getEmpId()<<" "<<;
         updateSalary(employees[i],employees[i].getSalary()*1.1);
     }
 }
